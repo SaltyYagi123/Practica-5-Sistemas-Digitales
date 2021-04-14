@@ -1,0 +1,145 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY Pract5 IS
+	GENERIC (
+		n : INTEGER := 32);
+	PORT (
+	clk, reset_n : IN STD_LOGIC;
+
+END Pract5;
+
+ARCHITECTURE structural OF Pract5 IS
+
+	--Señales ya definidas en el diagrama 
+	SIGNAL ir_out, ir_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL pc_out, pc_ir : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL pc_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL alu_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL alur_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL reg_a, reg_b : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL d_ram_alu, pc_out_reg, inm : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL tipo_inst : STD_LOGIC_VECTOR(2 DOWNTO 0);
+	SIGNAL tipo_acc : STD_LOGIC_VECTOR(1 DOWNTO 0);
+	SIGNAL m_pc, m_banco : STD_LOGIC_VECTOR(1 DOWNTO 0);
+	SIGNAL wr_pc_cond, wr_pc, mask_b0, m_shamt : STD_LOGIC;
+	SIGNAL en_ir, en_pc, en_banco, l_u, we_ram, m_ram, m_shamt : STD_LOGIC;
+	SIGNAL z, lt, ge : STD_LOGIC;
+	--Señales que no vienen y/o dependen de otras puertas logicas 
+
+BEGIN
+
+	--Señal PC_In
+	pc_in <= alu_out WHEN m_pc = "00" ELSE
+		alur_out WHEN m_pc = "01" ELSE
+		STD_LOGIC_VECTOR(to_unsigned(0, 32)) WHEN m_pc = "11" ELSE
+		(OTHERS => '0');
+
+	--Instanciamos todos los registros 
+	PC : ENTITY work.Registro_Gen
+		GENERIC PORT (
+			g_data_width : INTEGER := 32
+		)
+		PORT (
+			d => pc_in,
+			clk => clk,
+			en => en_pc,
+			q => pc_out,
+		);
+
+	PC_IR : ENTITY work.Registro_Gen
+		GENERIC PORT (
+			g_data_width : INTEGER := 32
+		)
+		PORT (
+			d => pc_out,
+			clk => clk,
+			en => en_ir,
+			q => pc_ir
+		);
+
+	IR : ENTITY work.Registro_Gen
+		GENERIC PORT (
+			g_data_width : INTEGER := 32
+		)
+		PORT (
+			d => ir_in,
+			clk => clk,
+			en => en_ir,
+			q => ir_out
+		);
+
+	ALUR : ENTITY work.Registro_Gen
+		GENERIC PORT (
+			g_data_width : INTEGER := 32
+		)
+		PORT (
+			d => alu_out,
+			clk => clk,
+			en => '1',
+			q => alur_out
+		);
+
+	--Instanciamos las memorias 
+	RAM : ENTITY work.RAM
+		PORT (
+			addr => alur_out,
+			din => reg_b,
+			tipo_acc => tipo_acc,
+			l_u => l_u,
+			we_ram => we_ram,
+			dout = >, --PENDING WARNING CAUTION
+			clk => clk
+		);
+
+	ROM : ENTITY work.ROM
+		PORT (
+			clk => clk,
+			en_pc => en_pc,
+			addr => pc_out,
+			data => ir_in
+		);
+
+	--Instanciamos el Banco de Registros 
+	BancoReg : ENTITY work.BancoReg
+		GENERIC PORT (
+			n =>
+		)
+		PORT (
+			clk => clk,
+			en_banco => en_banco,
+			AddrA => ir_out(19 DOWNTO 15),
+			AddrB => ir_out(24 DOWNTO 20),
+			AddrW => ir_out(11 DOWNTO 7),
+			D_in = >, --WARNING CAUTION FALTA POR RELLENAR
+			RegA => reg_a,
+			RegB => reg_b
+		);
+
+	--Instanciamos la ALU 
+	ALU : ENTITY work.ALU
+		GENERIC PORT (
+			data_width =>
+		)
+		PORT (
+			sel => alu_op,
+			shamt = >, --No se mete
+			a = >,
+			b = >,
+			s => alu_out,
+			lt => lt,
+			ge => ge,
+			z => z
+		);
+
+	Generador_Inmediatos : ENTITY work.InmGen
+		GENERIC PORT (
+			g_data_width =>
+		)
+		PORT (
+			ir_out => ir_out,
+			mask_b0 => mask_b0,
+			tipo_inst => tipo_inst,
+			inm => inm
+		);
