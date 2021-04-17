@@ -22,6 +22,7 @@ ENTITY CircuitoControl IS
 		l_u : OUT STD_LOGIC;
 		m_ram : OUT STD_LOGIC);
 END CircuitoControl;
+
 ARCHITECTURE behavioral OF CircuitoControl IS
 	TYPE t_estados IS (Reset, Fetch, Decod, Lui3, Lwsw3, Auipc3, Arit3, SalCond, Lw4, Sw4, Arit4, Lw5, jal3, jalr3, Inm3);
 	SIGNAL e_actual, e_sig : t_estados;

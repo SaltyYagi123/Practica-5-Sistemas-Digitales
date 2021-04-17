@@ -29,8 +29,8 @@ ARCHITECTURE structural OF Pract5 IS
 	SIGNAL wr_pc_cond, wr_pc, mask_b0, m_shamt : STD_LOGIC;
 	SIGNAL en_ir, en_pc, en_banco, l_u, we_ram, m_ram : STD_LOGIC;
 	SIGNAL z, lt, ge : STD_LOGIC;
-	SIGNAL alu_op: std_logic_vector(3 downto 0); --???
-	
+	SIGNAL alu_op : STD_LOGIC_VECTOR(3 DOWNTO 0); 
+
 	--Senhales que no vienen y/o dependen de otras puertas logicas 
 	SIGNAL d_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL alu_a, alu_b : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -49,8 +49,6 @@ BEGIN
 		NOT(z) WHEN mux_ir_out = "01" ELSE
 		lt WHEN mux_ir_out = "10" ELSE
 		ge WHEN mux_ir_out = "11";
-	
-
 	en_pc <= ((mux_exit AND wr_pc_cond) OR wr_pc);
 
 	--Senhal d_in desde del generador de inmediatos
@@ -69,11 +67,11 @@ BEGIN
 
 	shamt_in <= reg_b(4 DOWNTO 0) WHEN m_shamt = '0' ELSE
 		ir_out(24 DOWNTO 20) WHEN m_shamt = '1';
-		
+
 	--Senhal de la salida despues de la RAM  
 	d_ram_alu <= alur_out WHEN m_ram = '0' ELSE
 		ram_out WHEN m_ram = '1';
-		
+
 	--SeÃ±al que construimos nosotros para el mux4a1 de la izquierda
 	mux_ir_out <= ir_out(14) & ir_out(12);
 
@@ -183,6 +181,28 @@ BEGIN
 			mask_b0 => mask_b0,
 			tipo_inst => tipo_inst,
 			inm => inm
+		);
+
+	Maquina_Estados : ENTITY work.CircuitoControl
+		PORT MAP(
+			clk => clk,
+			reset_n => reset_n,
+			opcode = >, --!!!!!!!!!
+			ir_out => ir_out,
+			tipo_inst => tipo_inst,
+			alu_op => alu_op,
+			m_pc => m_pc,
+			tipo_acc => tipo_acc,
+			m_banco => m_banco,
+			m_alu_a => m_alu_a,
+			m_alu_b => m_alu_b,
+			wr_pc => wr_pc,
+			en_ir => en_ir,
+			en_banco => en_banco,
+			wr_pc_cond => wr_pc_cond,
+			we_ram => we_ram,
+			l_u => l_u,
+			m_ram => m_ram
 		);
 
 END structural;
