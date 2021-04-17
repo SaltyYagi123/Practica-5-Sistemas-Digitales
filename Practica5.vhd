@@ -187,7 +187,7 @@ BEGIN
 		PORT MAP(
 			clk => clk,
 			reset_n => reset_n,
-			opcode = >, --!!!!!!!!!
+			opcode =>ir_out(6 downto 0),
 			ir_out => ir_out,
 			tipo_inst => tipo_inst,
 			alu_op => alu_op,
