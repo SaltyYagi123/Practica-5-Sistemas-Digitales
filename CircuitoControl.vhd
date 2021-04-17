@@ -72,6 +72,8 @@ BEGIN
 				e_sig <= Arit4;
 			WHEN Auipc3 =>
 				e_sig <= Arit4;
+			WHEN Inm3 =>
+				e_sig <= Arit4;
 			WHEN Arit4 =>
 				e_sig <= Fetch;
 			WHEN Lwsw3 =>
@@ -161,16 +163,19 @@ BEGIN
 				m_banco <= "00";
 				en_banco <= '1';
 				m_ram <= '1';
+
 			WHEN Inm3 =>
 				tipo_inst <= "000";
 				m_alu_a <= "00";--reg_a
 				m_alu_b <= "10";--inm
-				alu_op <= ir_out(30) & ir_out(14 DOWNTO 0);
+				alu_op <= ir_out(30) & ir_out(14 DOWNTO 12);
+
 			WHEN jal3 => --jal x1, offset
 				tipo_inst <= "100";
 				m_alu_a <= "10";--pc_ir
 				m_alu_b <= "10";--inm (signo ext)
 				alu_op <= "0000";--suma
+
 			WHEN Jalr3 => --jalr x1, rs, 0
 				tipo_inst <= "000";
 				m_banco <= "10";
@@ -178,6 +183,7 @@ BEGIN
 				m_alu_a <= "00";--reg_a
 				m_alu_b <= "10";--inm (12 bits)
 				alu_op <= "0000";
+				mask_b0 <= 1;
 			WHEN OTHERS => NULL;
 
 		END CASE;
