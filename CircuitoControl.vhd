@@ -14,6 +14,7 @@ ENTITY CircuitoControl IS
 		m_banco : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
 		m_alu_a : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
 		m_alu_b : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+		mask_b0: out std_LOGIC;
 		wr_pc : OUT STD_LOGIC;
 		en_ir : OUT STD_LOGIC;
 		en_banco : OUT STD_LOGIC;
@@ -183,7 +184,7 @@ BEGIN
 				m_alu_a <= "00";--reg_a
 				m_alu_b <= "10";--inm (12 bits)
 				alu_op <= "0000";
-				mask_b0 <= 1;
+				mask_b0 <= '1';
 			WHEN OTHERS => NULL;
 
 		END CASE;

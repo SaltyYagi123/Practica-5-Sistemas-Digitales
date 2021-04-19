@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\ytobi\OneDrive\Escritorio\Practica-5-Sistemas-Digitales-\simulation\modelsim
+Ebancoreg
+Z1 w1618820485
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\ytobi\OneDrive\Escritorio\Practica-5-Sistemas-Digitales-\simulation\modelsim
+Z6 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
+Z7 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
+l0
+L5
+V632N1Zc1?B3Q?^B`C8c8R0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1618826343.033000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd|
+Z11 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 [z:QR6;D9F:dTJ`ciaomc2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 8 bancoreg 0 22 632N1Zc1?B3Q?^B`C8c8R0
+l22
+L19
+Vn:E<68gbNbG2lL]6ZeZ>b2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 W9_AAeFPbDmO8cAE697Yg0
+!i10b 1
+Ebancoreg_vhd_tst
+Z14 w1618826339
+R2
+R3
+R4
+R5
+Z15 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
+Z16 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
+l0
+L5
+Vb9fP5X5JjAN1UbzFLDQLz3
+!s100 ;1F2YFN:>beEnRWF]og;Z1
+R8
+31
+!i10b 1
+Z17 !s108 1618826343.104000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht|
+Z19 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht|
+R12
+R13
+Abancoreg_arch
+R2
+R3
+R4
+DEx4 work 16 bancoreg_vhd_tst 0 22 b9fP5X5JjAN1UbzFLDQLz3
+l31
+L8
+VQC2k6ROc7l;671CNX7^fo2
+!s100 F9Jg[GkFWlh`59>Sf^0hc2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

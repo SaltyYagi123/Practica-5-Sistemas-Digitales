@@ -17,11 +17,12 @@ ENTITY BancoReg IS
 END BancoReg;
 
 ARCHITECTURE behavioral OF BancoReg IS
-	TYPE registros IS ARRAY(7 DOWNTO 0) OF STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
+	TYPE registros IS ARRAY(31 DOWNTO 0) OF STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
 	SIGNAL reg_block : registros;
 BEGIN
+
 	registroA : PROCESS (AddrA, reg_block)
-		VARIABLE direc : INTEGER RANGE 0 TO 7;
+		VARIABLE direc : INTEGER RANGE 0 TO 31;
 	BEGIN
 		direc := to_integer (unsigned(AddrA));
 		IF AddrA = "00000" THEN
@@ -32,7 +33,7 @@ BEGIN
 	END PROCESS registroA;
 
 	registroB : PROCESS (AddrB, reg_block)
-		VARIABLE direc : INTEGER RANGE 0 TO 7;
+		VARIABLE direc : INTEGER RANGE 0 TO 31;
 	BEGIN
 		direc := to_integer (unsigned(AddrB));
 		IF AddrB = "00000" THEN
@@ -43,9 +44,9 @@ BEGIN
 	END PROCESS registroB;
 
 	escritura : PROCESS (clk, en_banco, AddrW, D_in)
-		VARIABLE direc : INTEGER RANGE 0 TO 7;
+		VARIABLE direc : INTEGER RANGE 0 TO 31;
 	BEGIN
-		direc := to_integer (unsigned(AddrW));
+		direc := to_integer(unsigned(AddrW));
 		IF clk'event AND clk = '1' THEN
 			IF en_banco = '1' THEN
 				reg_block(direc) <= D_in;
