@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Practica5
-Tue Apr 20 20:23:42 2021
+Tue Apr 20 21:45:03 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,11 +14,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
- 10. Parameter Settings for User Entity Instance: SumadorRestador:SumadorRestador
- 11. Port Connectivity Checks: "SumadorRestador:SumadorRestador"
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |InmGen
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 20 20:23:42 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 20 21:45:03 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Practica5                                       ;
-; Top-level Entity Name              ; ALU                                             ;
+; Top-level Entity Name              ; InmGen                                          ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 51                                              ;
-;     Total combinational functions  ; 51                                              ;
+; Total logic elements               ; 40                                              ;
+;     Total combinational functions  ; 40                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 21                                              ;
+; Total pins                         ; 68                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -67,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C20F484C7       ;                    ;
-; Top-level entity name                                                      ; ALU                ; Practica5          ;
+; Top-level entity name                                                      ; InmGen             ; Practica5          ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,60 +156,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
-; SumadorRestador.vhd              ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd ;         ;
-; Sumador1Bit.vhd                  ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd     ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
+; InmGen.vhd                       ; yes             ; User VHDL File  ; C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 51     ;
-;                                             ;        ;
-; Total combinational functions               ; 51     ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 41     ;
-;     -- 3 input functions                    ; 7      ;
-;     -- <=2 input functions                  ; 3      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 51     ;
-;     -- arithmetic mode                      ; 0      ;
-;                                             ;        ;
-; Total registers                             ; 0      ;
-;     -- Dedicated logic registers            ; 0      ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 21     ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; sel[2] ;
-; Maximum fan-out                             ; 19     ;
-; Total fan-out                               ; 198    ;
-; Average fan-out                             ; 2.75   ;
-+---------------------------------------------+--------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 40           ;
+;                                             ;              ;
+; Total combinational functions               ; 40           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 27           ;
+;     -- 3 input functions                    ; 10           ;
+;     -- <=2 input functions                  ; 3            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 40           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 68           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; tipo_inst[1] ;
+; Maximum fan-out                             ; 15           ;
+; Total fan-out                               ; 176          ;
+; Average fan-out                             ; 1.63         ;
++---------------------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
-+---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Library Name ;
-+---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
-; |ALU                                        ; 51 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |ALU                                                                     ; work         ;
-;    |SumadorRestador:SumadorRestador|        ; 11 (1)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|SumadorRestador:SumadorRestador                                     ; work         ;
-;       |Sumador1Bit:\GenSum:0:i_Sumador1Bit| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|SumadorRestador:SumadorRestador|Sumador1Bit:\GenSum:0:i_Sumador1Bit ; work         ;
-;       |Sumador1Bit:\GenSum:1:i_Sumador1Bit| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|SumadorRestador:SumadorRestador|Sumador1Bit:\GenSum:1:i_Sumador1Bit ; work         ;
-;       |Sumador1Bit:\GenSum:2:i_Sumador1Bit| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|SumadorRestador:SumadorRestador|Sumador1Bit:\GenSum:2:i_Sumador1Bit ; work         ;
-;       |Sumador1Bit:\GenSum:3:i_Sumador1Bit| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|SumadorRestador:SumadorRestador|Sumador1Bit:\GenSum:3:i_Sumador1Bit ; work         ;
-;       |Sumador1Bit:\GenSum:4:i_Sumador1Bit| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|SumadorRestador:SumadorRestador|Sumador1Bit:\GenSum:4:i_Sumador1Bit ; work         ;
-+---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |InmGen                    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |InmGen             ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,33 +220,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; data_width     ; 4     ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |InmGen|Mux11              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |InmGen|Mux10              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |InmGen|Mux29              ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |InmGen|Mux25              ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |InmGen|Mux17              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |InmGen ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; g_data_width   ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SumadorRestador:SumadorRestador ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; data_width     ; 5     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SumadorRestador:SumadorRestador"                                                     ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -273,7 +258,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 20 20:23:41 2021
+    Info: Processing started: Tue Apr 20 21:45:02 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Practica5 -c Practica5
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sumadorrestador.vhd
@@ -298,8 +283,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
     Info (12022): Found design unit 1: RAM-rtl
     Info (12023): Found entity 1: RAM
 Info (12021): Found 2 design units, including 1 entities, in source file practica5.vhd
-    Info (12022): Found design unit 1: Pract5-structural
-    Info (12023): Found entity 1: Pract5
+    Info (12022): Found design unit 1: Practica5-structural
+    Info (12023): Found entity 1: Practica5
 Info (12021): Found 2 design units, including 1 entities, in source file inmgen.vhd
     Info (12022): Found design unit 1: InmGen-rtl
     Info (12023): Found entity 1: InmGen
@@ -309,19 +294,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file circuit
 Info (12021): Found 2 design units, including 1 entities, in source file bancoreg.vhd
     Info (12022): Found design unit 1: BancoReg-behavioral
     Info (12023): Found entity 1: BancoReg
-Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Info (12128): Elaborating entity "SumadorRestador" for hierarchy "SumadorRestador:SumadorRestador"
-Info (12128): Elaborating entity "Sumador1Bit" for hierarchy "SumadorRestador:SumadorRestador|Sumador1Bit:\GenSum:0:i_Sumador1Bit"
+Info (12127): Elaborating entity "InmGen" for the top level hierarchy
+Warning (10873): Using initial value X (don't care) for net "inm_b[3..0]" at InmGen.vhd(29)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 51 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Tue Apr 20 20:23:42 2021
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ir_out[0]"
+    Warning (15610): No output dependent on input pin "ir_out[1]"
+    Warning (15610): No output dependent on input pin "ir_out[2]"
+    Warning (15610): No output dependent on input pin "ir_out[3]"
+    Warning (15610): No output dependent on input pin "ir_out[4]"
+    Warning (15610): No output dependent on input pin "ir_out[5]"
+    Warning (15610): No output dependent on input pin "ir_out[6]"
+    Warning (15610): No output dependent on input pin "mask_b0"
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 36 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 40 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4642 megabytes
+    Info: Processing ended: Tue Apr 20 21:45:03 2021
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

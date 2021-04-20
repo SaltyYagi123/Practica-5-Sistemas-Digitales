@@ -91,6 +91,8 @@ BEGIN
 				e_sig <= Lw5;
 			WHEN Lw5 =>
 				e_sig <= Fetch;
+			WHEN others => 
+				e_sig <= Reset;
 		END CASE;
 	END PROCESS TransicionEstados;
 

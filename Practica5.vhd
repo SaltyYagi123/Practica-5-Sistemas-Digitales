@@ -2,16 +2,16 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY Pract5 IS
+ENTITY Practica5 IS
 	GENERIC (
 		n : INTEGER := 32);
 	PORT (
 		clk, reset_n : IN STD_LOGIC
 	);
 
-END Pract5;
+END Practica5;
 
-ARCHITECTURE structural OF Pract5 IS
+ARCHITECTURE structural OF Practica5 IS
 
 	--Senhales ya definidas en el diagrama 
 	SIGNAL ir_out, ir_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -37,6 +37,7 @@ ARCHITECTURE structural OF Pract5 IS
 	SIGNAL shamt_in : STD_LOGIC_VECTOR(4 DOWNTO 0);
 	SIGNAL mux_ir_out : STD_LOGIC_VECTOR(1 DOWNTO 0);
 	SIGNAL mux_exit : STD_LOGIC;
+	
 BEGIN
 
 	--Senhal PC_In
@@ -187,7 +188,7 @@ BEGIN
 		PORT MAP(
 			clk => clk,
 			reset_n => reset_n,
-			opcode =>ir_out(6 downto 0),
+			opcode =>ir_out(4 downto 0),
 			ir_out => ir_out,
 			tipo_inst => tipo_inst,
 			alu_op => alu_op,

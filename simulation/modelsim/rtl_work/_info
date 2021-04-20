@@ -3,35 +3,34 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\ytobi\OneDrive\Escritorio\Practica-5-Sistemas-Digitales-\simulation\modelsim
-Ealu
-Z1 w1618586010
+Einmgen
+Z1 w1618948397
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z5 dC:\Users\ytobi\OneDrive\Escritorio\Practica-5-Sistemas-Digitales-\simulation\modelsim
-Z6 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd
-Z7 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd
+Z6 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd
+Z7 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd
 l0
-L5
-VObV=U658m>Of=m[=]LK7m3
+L6
+V4R=zlgC2KoZYF5R4Q7Vf71
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1618941198.272000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd|
-Z11 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd|
+Z9 !s108 1618949280.520000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd|
+Z11 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
-!s100 l6VojTkn>X^1S==E@GQWQ1
+!s100 03G9J8[G^Cc9QB9m8obT@0
 !i10b 1
-Abehavioral
-Z14 DEx4 work 15 sumadorrestador 0 22 cA4I5E]YcldkUVU@?j_YQ2
+Artl
 R2
 R3
 R4
-Z15 DEx4 work 3 alu 0 22 ObV=U658m>Of=m[=]LK7m3
-l22
-L16
-V50LgJb_;doo;`Z`jSE9YS1
+Z14 DEx4 work 6 inmgen 0 22 4R=zlgC2KoZYF5R4Q7Vf71
+l33
+L18
+V`4PCnV>`Q?mOlONYT4jJW3
 R8
 31
 R9
@@ -39,117 +38,43 @@ R10
 R11
 R12
 R13
-!s100 hNzk2CRA8XMBNG<@@e=ac1
+!s100 fL@lOkP03ARcUO7]DL`>J0
 !i10b 1
-Ealu_vhd_tst
-Z16 w1618941191
-Z17 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z18 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Einmgen_vhd_tst
+Z15 w1618949276
 R2
 R3
 R4
 R5
-Z19 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht
-Z20 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht
+Z16 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/InmGen.vht
+Z17 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/InmGen.vht
 l0
-L6
-VFe4C0GI=Hz0VdBM;k:>GN2
-!s100 CB64PRNOJd27TolN2>BaO0
+L5
+Vo;6JTY?h:7]@WnKAcYi4Y3
+!s100 4DbnZVOSYaL>`k>4<:3lM0
 R8
 31
 !i10b 1
-Z21 !s108 1618941198.342000
-Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht|
-Z23 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht|
+Z18 !s108 1618949280.583000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/InmGen.vht|
+Z20 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/InmGen.vht|
 R12
 R13
-Aalu_arch
-R15
-R17
-R18
-R2
-R3
-R4
-DEx4 work 11 alu_vhd_tst 0 22 Fe4C0GI=Hz0VdBM;k:>GN2
-l20
-L8
-Vi:kHVD`fDoRgRKSJ`Hof=0
-!s100 Y`7jO:59<ia_4m>0O0@=X0
-R8
-31
-!i10b 1
-R21
-R22
-R23
-R12
-R13
-Esumador1bit
-Z24 w1618353640
-R3
-R4
-R5
-Z25 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd
-Z26 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd
-l0
-L4
-VLdMIMV^a<eQzBSIb[]2Y>1
-R8
-31
-Z27 !s108 1618941198.207000
-Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd|
-Z29 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd|
-R12
-R13
-!s100 CEW<^=7]bW20ffI=c9PY11
-!i10b 1
-Abehavioral
-R3
-R4
-DEx4 work 11 sumador1bit 0 22 LdMIMV^a<eQzBSIb[]2Y>1
-l14
-L13
-V@Y_V0ME[9z`GDIU4?UaVj3
-R8
-31
-R27
-R28
-R29
-R12
-R13
-!s100 DmeJVdmMX5>J4Kb8XKJ:`2
-!i10b 1
-Esumadorrestador
-Z30 w1618353322
-R3
-R4
-R5
-Z31 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd
-Z32 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd
-l0
-L4
-VcA4I5E]YcldkUVU@?j_YQ2
-R8
-31
-Z33 !s108 1618941198.138000
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd|
-Z35 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd|
-R12
-R13
-!s100 OVB5cfW3?g0m6lGkz95Uz0
-!i10b 1
-Astructural
-R3
-R4
+Ainmgen_arch
 R14
-l26
-L15
-VCK5RD>?klIYZD=b08<dAS2
+R2
+R3
+R4
+DEx4 work 14 inmgen_vhd_tst 0 22 o;6JTY?h:7]@WnKAcYi4Y3
+l23
+L8
+Vd7H79CYf:=N]e7HaOMHO;3
+!s100 LEgZW7gZ7@[3N=Zb9aYbd0
 R8
 31
-R33
-R34
-R35
+!i10b 1
+R18
+R19
+R20
 R12
 R13
-!s100 lL`=DS=GOh96R=>7nER7:3
-!i10b 1

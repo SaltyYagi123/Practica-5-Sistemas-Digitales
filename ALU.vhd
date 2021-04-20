@@ -7,7 +7,7 @@ ENTITY ALU IS
         data_width : INTEGER := 4);
     PORT (
         sel : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        shamt : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+        shamt : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
         a, b : IN STD_LOGIC_VECTOR(data_width - 1 DOWNTO 0);
         s : OUT STD_LOGIC_VECTOR(data_width - 1 DOWNTO 0);
         lt, ge, z : OUT STD_LOGIC);
