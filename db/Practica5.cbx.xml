@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Practica5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|altsyncram:ram_0_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|altsyncram:ram_1_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|altsyncram:ram_2_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|altsyncram:ram_3_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -125,11 +125,11 @@ BEGIN
 	RAM : ENTITY work.RAM
 		PORT MAP(
 			addr => alur_out,
-			din => reg_b,
-			tipo_acc => tipo_acc,
+			d_in => reg_b,
+			acc_type => tipo_acc,
 			l_u => l_u,
-			we_ram => we_ram,
-			dout => ram_out, --seÃƒÂ±al producida por nosotros
+			we => we_ram,
+			d_out => ram_out, --seÃƒÂ±al producida por nosotros
 			clk => clk
 		);
 

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Practica5
-Tue Apr 20 21:46:37 2021
+Tue Apr 20 22:56:25 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -34,9 +34,9 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Apr 20 21:46:37 2021 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 20 22:56:25 2021 ;
 ; Revision Name             ; Practica5                             ;
-; Top-level Entity Name     ; InmGen                                ;
+; Top-level Entity Name     ; RAM                                   ;
 ; Family                    ; Cyclone II                            ;
 +---------------------------+---------------------------------------+
 
@@ -47,13 +47,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 20 21:46:36 2021
+    Info: Processing started: Tue Apr 20 22:56:24 2021
 Info: Command: quartus_eda --read_settings_files=on --write_settings_files=off Practica5 -c Practica5 --gen_testbench
-Info (201002): Generated VHDL Test Bench File C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/InmGen.vht for simulation
+Info (201002): Generated VHDL Test Bench File C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/RAM.vht for simulation
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4520 megabytes
-    Info: Processing ended: Tue Apr 20 21:46:37 2021
+    Info: Processing ended: Tue Apr 20 22:56:25 2021
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 
