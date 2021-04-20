@@ -5,11 +5,13 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
+vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd}
+vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd}
+vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd}
 
-vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
+vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  ALU_vhd_tst
 
 add wave *
 view structure

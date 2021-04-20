@@ -10,206 +10,51 @@
 # ** Warning: Copied G:\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SumadorRestador
+# -- Compiling architecture structural of SumadorRestador
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Sumador1Bit
+# -- Compiling architecture behavioral of Sumador1Bit
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
+# -- Compiling entity ALU
+# -- Compiling architecture behavioral of ALU
+# -- Loading entity SumadorRestador
 # 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Practica4_vhd_tst
+# -- Compiling architecture Practica4_arch of Practica4_vhd_tst
+# ** Error: (vcom-11) Could not find work.practica4.
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
+# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht(21): (vcom-1195) Cannot find expanded name "work.Practica4".
 # 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht(77): Statement is not explicitly labeled.
-# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht(78): VHDL Compiler exiting
+# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht(21): Unknown expanded name.
+# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht(182): VHDL Compiler exiting
 # ** Error: G:/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./Practica5_run_msim_rtl_vhdl.do line 10
+# Error in macro ./Practica5_run_msim_rtl_vhdl.do line 12
 # G:/modelsim_ase/win32aloem/vcom failed.
 #     while executing
-# "vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}"
+# "vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht}"
 do Practica5_run_msim_rtl_vhdl.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -218,32 +63,54 @@ do Practica5_run_msim_rtl_vhdl.do
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SumadorRestador
+# -- Compiling architecture structural of SumadorRestador
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Sumador1Bit
+# -- Compiling architecture behavioral of Sumador1Bit
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
+# -- Compiling entity ALU
+# -- Compiling architecture behavioral of ALU
+# -- Loading entity SumadorRestador
 # 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
+# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ALU_vhd_tst
+# -- Compiling architecture ALU_arch of ALU_vhd_tst
+# -- Loading entity ALU
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  ALU_vhd_tst
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ALU_vhd_tst 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.alu_vhd_tst(alu_arch)
+# Loading work.alu(behavioral)
+# Loading work.sumadorrestador(structural)
+# Loading work.sumador1bit(behavioral)
 # 
 # add wave *
 # view structure
@@ -251,1777 +118,521 @@ do Practica5_run_msim_rtl_vhdl.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht(60): near ";": expecting ')'
-# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht(90): VHDL Compiler exiting
-# ** Error: G:/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./Practica5_run_msim_rtl_vhdl.do line 10
-# G:/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}"
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht(53): Illegal concurrent statement.
-# ** Error: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht(54): near "PROCESS": expecting ';'
-# ** Error: G:/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./Practica5_run_msim_rtl_vhdl.do line 10
-# G:/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}"
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3421) Value 8 for direc is out of range 0 to 7.
-#    Time: 160001 ps  Iteration: 1  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 48
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 48 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Fatal: (vsim-3734) Index value 8 is out of range 7 downto 0.
-#    Time: 170 ns  Iteration: 0  Process: /bancoreg_vhd_tst/i1/escritura File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-# Fatal error in Process escritura at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd line 52
-# 
-# HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd 52 Process escritura
-# 
-do Practica5_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Error: Assertion violation.
-#    Time: 651001 ps  Iteration: 0  Instance: /bancoreg_vhd_tst
-# ** Failure: No se copia bien
-#    Time: 651001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in ForLoop loop at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 72
-# Simulation Breakpoint: Break in ForLoop loop at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 72
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 330 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 810 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1290 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1770 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2250 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2730 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3210 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3690 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4170 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4650 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5130 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5610 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6090 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6570 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7050 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7530 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8010 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8470 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8950 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9430 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9910 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10390 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10870 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11350 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11830 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12310 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12790 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13270 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13750 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14230 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14710 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15190 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15670 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16150 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16610 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 17090 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 17570 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 18050 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 18530 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 19010 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 19490 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 19970 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 20450 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 20930 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 21410 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 21890 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 22370 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 22850 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 23330 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 23810 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 24290 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 24750 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 25230 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 25710 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 26190 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 26670 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 27150 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 27630 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 28110 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 28590 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 29070 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 29550 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 30030 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 30510 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 30990 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 31470 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 31950 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 32430 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 32890 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 33370 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 33850 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 34330 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 34810 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 35290 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 35770 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 36250 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 36730 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 37210 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 37690 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 38170 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 38650 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 39130 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 39610 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 40090 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 40570 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 41030 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 41510 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 41990 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 42470 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 42950 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 43430 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 43910 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 44390 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 44870 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 45350 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 45830 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 46310 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 46790 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 47270 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 47750 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 48230 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 48710 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 49170 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 49650 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 50130 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 50610 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 51090 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 51570 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 52050 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 52530 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 53010 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 53490 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 53970 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 54450 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 54930 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 55410 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 55890 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 56370 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 56850 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 57310 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 57790 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 58270 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 58750 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 59230 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 59710 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 60190 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 60670 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 61150 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 61630 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 62110 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 62590 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 63070 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 63550 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 64030 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 64510 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 64990 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 65450 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 65930 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 66410 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 66890 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 67370 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 67850 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 68330 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 68810 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 69290 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 69770 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 70250 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 70730 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 71210 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 71690 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 72170 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 72650 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 73130 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 73590 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 74070 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 74550 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 75030 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 75510 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 75990 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 76470 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 76950 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 77430 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 77910 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 78390 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 78870 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 79350 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 79830 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 80310 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 80790 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 81270 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 81730 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 82210 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 82690 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 83170 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 83650 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 84130 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 84610 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 85090 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 85570 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 86050 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 86530 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 87010 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 87490 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 87970 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 88450 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 88930 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 89410 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 89870 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 90350 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 90830 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 91310 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 91790 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 92270 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 92750 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 93230 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 93710 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 94190 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 94670 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 95150 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 95630 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 96110 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 96590 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 97070 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 97550 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 98010 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 98490 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 98970 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 99450 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 99930 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 100410 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 100890 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 101370 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 101850 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 102330 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 102810 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 103290 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 103770 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 104250 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 104730 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 105210 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 105690 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 106150 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 106630 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 107110 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 107590 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 108070 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 108550 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 109030 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 109510 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 109990 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 110470 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 110950 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 111430 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 111910 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 112390 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 112870 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 113350 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 113830 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 114290 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 114770 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 115250 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 115730 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 116210 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 116690 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 117170 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 117650 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 118130 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 118610 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 119090 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 119570 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 120050 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 120530 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 121010 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 121490 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 121970 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 122430 ns  Iteration: 0  Instance: /alu_vhd_tst
+# ** Failure: fin de la simulación
+#    Time: 122570 ns  Iteration: 0  Process: /alu_vhd_tst/line__37 File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht
+# Break in Process line__37 at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht line 178
+# Simulation Breakpoint: Break in Process line__37 at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/ALU.vht line 178
+# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 19
 # WARNING: No extended dataflow license exists
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Error: Assertion violation.
-#    Time: 651001 ps  Iteration: 0  Instance: /bancoreg_vhd_tst
-# ** Failure: No se copia bien
-#    Time: 651001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in ForLoop loop at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 72
-# Simulation Breakpoint: Break in ForLoop loop at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 72
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 651001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in ForLoop loop at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 72
-# Simulation Breakpoint: Break in ForLoop loop at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 72
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 50 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 110 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 150 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 190 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 210 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 230 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 250 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 270 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 290 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 310 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 330 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 350 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 370 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 390 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 410 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 430 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 450 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 470 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 490 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 510 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 530 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 550 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 570 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 590 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 610 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 630 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 992001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 73
-# Simulation Breakpoint: Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 73
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 992001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# Simulation Breakpoint: Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 1312001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# Simulation Breakpoint: Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 1024001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# Simulation Breakpoint: Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 3904001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# Simulation Breakpoint: Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
-do Practica5_run_msim_rtl_vhdl.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg
-# -- Compiling architecture behavioral of BancoReg
-# 
-# vcom -93 -work work {C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity BancoReg_vhd_tst
-# -- Compiling architecture BancoReg_arch of BancoReg_vhd_tst
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  BancoReg_vhd_tst
-# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BancoReg_vhd_tst 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.bancoreg_vhd_tst(bancoreg_arch)
-# Loading work.bancoreg(behavioral)
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /bancoreg_vhd_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /bancoreg_vhd_tst/i1
-# ** Failure: No se copia bien
-#    Time: 3904001 ps  Iteration: 0  Process: /bancoreg_vhd_tst/always File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-# Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# Simulation Breakpoint: Break in Process always at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht line 79
-# MACRO ./Practica5_run_msim_rtl_vhdl.do PAUSED at line 17
