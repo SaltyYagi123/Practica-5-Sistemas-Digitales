@@ -1,0 +1,18 @@
+
+State Machine - |Practica5|CircuitoControl:Maquina_Estados|e_actual
+Name e_actual.Inm3 e_actual.jalr3 e_actual.jal3 e_actual.Lw5 e_actual.Arit4 e_actual.Sw4 e_actual.Lw4 e_actual.SalCond e_actual.Arit3 e_actual.Auipc3 e_actual.Lwsw3 e_actual.Lui3 e_actual.Decod e_actual.Fetch e_actual.Reset 
+e_actual.Reset 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+e_actual.Fetch 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+e_actual.Decod 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+e_actual.Lui3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+e_actual.Lwsw3 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+e_actual.Auipc3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+e_actual.Arit3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+e_actual.SalCond 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+e_actual.Lw4 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+e_actual.Sw4 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+e_actual.Arit4 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+e_actual.Lw5 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+e_actual.jal3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+e_actual.jalr3 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+e_actual.Inm3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

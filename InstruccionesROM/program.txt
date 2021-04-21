@@ -1,0 +1,17 @@
+Address     Code        Basic                        Line Source
+
+0x00003000  0x00000f93  addi x31,x0,0                1    	li t6, 0x00000000 #Cargamos la direccion nula en t6 
+0x00003004  0x02c0006f  jal x0,44                    2    	j main #Jump to main->
+0x00003008  0x00100293  addi x5,x0,1                 4    comp :  li t0, 1  #Le cargamos al t0 -> 1
+0x0000300c  0x00f00f13  addi x30,x0,15               5    	li t5, 15 #Le cargamos al t5 -> 15
+0x00003010  0x00b50663  beq x10,x11,12               6    	beq a0, a1, corr #Comparamos a1 y a0, que en este caso si que son iguales -> Por lo tanto pasamos a corr, si no lo fuera pasamos a inco 
+0x00003014  0x01efa023  sw x30,0(x31)                8    inco :  sw t5,0(t6) #En el caso de que no sean iguales, almacenamos la 15 en la direccion de memoria
+0x00003018  0x0080006f  jal x0,8                     9    	j retu #Jump to retu 
+0x0000301c  0x005fa023  sw x5,0(x31)                 11   corr : 	sw t0, 0(t6) #Metemos los contenidos de t0 <- 1 en la direccion de memoria t6 que metimos al principio
+0x00003020  0x004f8f93  addi x31,x31,4               13   retu : 	addi t6, t6, 4 #A t6 -> le sumamos espacio para una palabra
+0x00003024  0x00600e13  addi x28,x0,6                14   	li t3, 6
+0x00003028  0x01cfa023  sw x28,0(x31)                15   	sw t3, 0(t6) 
+0x0000302c  0x00008067  jalr x0,x1,0                 16    	ret #<- Esto sirve para guardar los resultados antes de actualizar el puntero
+0x00003030  0x00500593  addi x11,x0,5                19   main : 	addi a1, x0, 5 #Le asignamos a a1 y a a0 un valor de 5
+0x00003034  0x00500513  addi x10,x0,5                20   	addi a0, x0, 5 
+0x00003038  0xfd1ff0ef  jal x1,-48                   21   	jal comp #Jump and link to -> nos guarda el return address

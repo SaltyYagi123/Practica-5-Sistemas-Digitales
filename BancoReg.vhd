@@ -1,56 +1,57 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
 
 ENTITY BancoReg IS
-	GENERIC (
-		n : INTEGER := 32);
-	PORT (
-		clk : IN STD_LOGIC;
-		en_banco : IN STD_LOGIC;
-		AddrA : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-		AddrB : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-		AddrW : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-		D_in : IN STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
-		RegA : OUT STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
-		RegB : OUT STD_LOGIC_VECTOR(n - 1 DOWNTO 0));
+    GENERIC (
+        gen_width : INTEGER := 32;
+        num_reg : INTEGER := 32
+    );
+    PORT (
+        clk : IN STD_LOGIC;
+        reset_n : IN STD_LOGIC;
+        d_in : IN STD_LOGIC_VECTOR(gen_width - 1 DOWNTO 0);
+        en_w : IN STD_LOGIC;
+        addrA : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        addrB : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        addrW : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        regA : OUT STD_LOGIC_VECTOR(gen_width - 1 DOWNTO 0);
+        regB : OUT STD_LOGIC_VECTOR(gen_width - 1 DOWNTO 0)
+    );
 END BancoReg;
 
 ARCHITECTURE behavioral OF BancoReg IS
-	TYPE registros IS ARRAY(31 DOWNTO 0) OF STD_LOGIC_VECTOR(n - 1 DOWNTO 0);
-	SIGNAL reg_block : registros;
+
+    TYPE reg_array IS ARRAY(0 TO num_reg - 1) OF STD_LOGIC_VECTOR(gen_width - 1 DOWNTO 0);
+    SIGNAL pointer : reg_array;
+
+    SIGNAL x0 : STD_LOGIC_VECTOR(gen_width - 1 DOWNTO 0);
+    SIGNAL addrNull : STD_LOGIC_VECTOR(4 DOWNTO 0);
+
 BEGIN
 
-	registroA : PROCESS (AddrA, reg_block)
-		VARIABLE direc : INTEGER RANGE 0 TO 31;
-	BEGIN
-		direc := to_integer (unsigned(AddrA));
-		IF AddrA = "00000" THEN
-			RegA <= (OTHERS => '0');
-		ELSE
-			RegA <= reg_block(direc);
-		END IF;
-	END PROCESS registroA;
+    x0 <= (OTHERS => '0');
+    addrNull <= (OTHERS => '0');
 
-	registroB : PROCESS (AddrB, reg_block)
-		VARIABLE direc : INTEGER RANGE 0 TO 31;
-	BEGIN
-		direc := to_integer (unsigned(AddrB));
-		IF AddrB = "00000" THEN
-			RegB <= (OTHERS => '0');
-		ELSE
-			RegB <= reg_block(direc);
-		END IF;
-	END PROCESS registroB;
+    reg_act : PROCESS (clk, reset_n, x0, en_w, addrW, addrNull, pointer, addrA, addrB, d_in)
+    BEGIN
 
-	escritura : PROCESS (clk, en_banco, AddrW, D_in)
-		VARIABLE direc : INTEGER RANGE 0 TO 31;
-	BEGIN
-		direc := to_integer(unsigned(AddrW));
-		IF clk'event AND clk = '1' THEN
-			IF en_banco = '1' THEN
-				reg_block(direc) <= D_in;
-			END IF;
-		END IF;
-	END PROCESS escritura;
-END behavioral;
+        IF reset_n = '0' THEN
+            pointer(to_integer(unsigned(addrNull))) <= x0;
+            FOR i IN 0 TO num_reg - 1 LOOP
+                pointer(i) <= x0;
+            END LOOP;
+        ELSE
+            IF rising_edge(clk) THEN
+                regA <= pointer(to_integer(unsigned(addrA)));
+                regB <= pointer(to_integer(unsigned(addrB)));
+
+                IF (en_w = '1' AND addrW /= addrNull) THEN
+                    pointer(to_integer(unsigned(addrW))) <= d_in;
+                ELSIF (en_w = '1' AND addrW = addrNull) THEN
+                    pointer(to_integer(unsigned(addrNull))) <= x0;
+                END IF;
+            END IF;
+        END IF;
+    END PROCESS;
+END behavioral; -- behavioral

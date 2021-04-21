@@ -5,7 +5,7 @@ ENTITY CircuitoControl IS
 	PORT (
 		clk : IN STD_LOGIC;
 		Reset_n : IN STD_LOGIC;
-		opcode : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+		opcode : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 		ir_out : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 		tipo_inst : OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
 		alu_op : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
@@ -13,6 +13,7 @@ ENTITY CircuitoControl IS
 		tipo_acc : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
 		m_banco : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
 		m_alu_a : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+		m_shamt: OUT STD_LOGIC;
 		m_alu_b : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
 		mask_b0: out std_LOGIC;
 		wr_pc : OUT STD_LOGIC;
@@ -172,12 +173,17 @@ BEGIN
 				m_alu_a <= "00";--reg_a
 				m_alu_b <= "10";--inm
 				alu_op <= ir_out(30) & ir_out(14 DOWNTO 12);
+				m_shamt <= '1';
 
 			WHEN jal3 => --jal x1, offset
 				tipo_inst <= "100";
 				m_alu_a <= "10";--pc_ir
 				m_alu_b <= "10";--inm (signo ext)
 				alu_op <= "0000";--suma
+				wr_pc <= '1';
+				m_pc <= "00";
+				en_banco <= '1';
+				m_banco <= "01";
 
 			WHEN Jalr3 => --jalr x1, rs, 0
 				tipo_inst <= "000";
@@ -187,6 +193,8 @@ BEGIN
 				m_alu_b <= "10";--inm (12 bits)
 				alu_op <= "0000";
 				mask_b0 <= '1';
+				wr_pc <= '1';
+				m_pc <= "00";
 			WHEN OTHERS => NULL;
 
 		END CASE;

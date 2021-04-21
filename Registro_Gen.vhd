@@ -10,7 +10,8 @@ ENTITY Registro_Gen IS
         d : IN STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
         clk : IN STD_LOGIC;
         en : IN STD_LOGIC;
-        q : OUT STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0)
+        q : OUT STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
+		  reset_n: in std_logic
     );
 END Registro_Gen;
 
@@ -22,7 +23,9 @@ BEGIN
 
     PROCESS (clk)
     BEGIN --process
-        IF rising_edge(clk) THEN
+		  IF reset_n = '0' then 
+					registro <= (others => '0');
+        ELSIF rising_edge(clk) THEN
             IF en = '1' THEN
                 registro <= d;
             END IF;

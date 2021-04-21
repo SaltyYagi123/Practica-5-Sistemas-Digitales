@@ -8,81 +8,76 @@ END BancoReg_vhd_tst;
 ARCHITECTURE BancoReg_arch OF BancoReg_vhd_tst IS
 	-- constants                                                 
 	-- signals                                                   
-	SIGNAL AddrA : STD_LOGIC_VECTOR(4 DOWNTO 0);
-	SIGNAL AddrB : STD_LOGIC_VECTOR(4 DOWNTO 0);
-	SIGNAL AddrW : STD_LOGIC_VECTOR(4 DOWNTO 0);
+	SIGNAL addrA : STD_LOGIC_VECTOR(4 DOWNTO 0);
+	SIGNAL addrB : STD_LOGIC_VECTOR(4 DOWNTO 0);
+	SIGNAL addrW : STD_LOGIC_VECTOR(4 DOWNTO 0);
 	SIGNAL clk : STD_LOGIC := '0';
-	SIGNAL D_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
-	SIGNAL en_banco : STD_LOGIC:= '0';
-	SIGNAL RegA : STD_LOGIC_VECTOR(31 DOWNTO 0);
-	SIGNAL RegB : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL d_in : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL en_w : STD_LOGIC := '0';
+	SIGNAL regA : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL regB : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL reset_n : STD_LOGIC:= '1';
+
 	COMPONENT BancoReg
 		PORT (
-			AddrA : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-			AddrB : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-			AddrW : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			addrA : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			addrB : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			addrW : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
 			clk : IN STD_LOGIC;
-			D_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-			en_banco : IN STD_LOGIC;
-			RegA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-			RegB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+			d_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+			en_w : IN STD_LOGIC;
+			regA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+			regB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+			reset_n : IN STD_LOGIC
 		);
 	END COMPONENT;
-BEGIN
+
+	BEGIN
 	i1 : BancoReg
 	PORT MAP(
 		-- list connections between master ports and signals
-		AddrA => AddrA,
-		AddrB => AddrB,
-		AddrW => AddrW,
+		addrA => addrA,
+		addrB => addrB,
+		addrW => addrW,
 		clk => clk,
-		D_in => D_in,
-		en_banco => en_banco,
-		RegA => RegA,
-		RegB => RegB
+		d_in => d_in,
+		en_w => en_w,
+		regA => regA,
+		regB => regB, 
+		reset_n => reset_n
 	);
 	--Todo bien hasta aquí
 
 	clk <= NOT clk AFTER 10 ns;
 
-	always: PROCESS
+	always : PROCESS
 	BEGIN
 		--Queremos observar si se puede cargar la direccion 555
-		D_in <= std_logic_vector(to_unsigned(555,32));
+		d_in <= STD_LOGIC_VECTOR(to_unsigned(555, 32));
 		--Queremos cargar esta direccion en los registros 
-		wait for 1 ps;
+		WAIT FOR 1 ps;
 
-		FOR i in 0 to 31 loop 
-		--Con el decodificador queremos pasar por cada uno de nuestros registros
-			AddrW <= std_logic_vector(to_unsigned(i,5));
-			wait for 1 ns;
-			AddrA <= std_logic_vector(to_unsigned(i,5));
-			wait for 1 ns;
-			AddrB <= std_logic_vector(to_unsigned(i,5));
-			wait for 40 ns;
-			en_banco <= '1';
-			wait for 40 ns;
-			en_banco <= '0';
-			wait for 40 ns;
+		FOR i IN 0 TO 31 LOOP
+			--Con el decodificador queremos pasar por cada uno de nuestros registros
+			addrW <= STD_LOGIC_VECTOR(to_unsigned(i, 5));
+			WAIT FOR 1 ns;
+			addrA <= STD_LOGIC_VECTOR(to_unsigned(i, 5));
+			WAIT FOR 1 ns;
+			addrB <= STD_LOGIC_VECTOR(to_unsigned(i, 5));
+			WAIT FOR 40 ns;
+			en_w <= '1';
+			WAIT FOR 40 ns;
+			en_w <= '0';
+			WAIT FOR 40 ns;
 
 		END LOOP;
 
-		--Iterar a traves de los multiplexores 31 -> 1
-		--FOR i in 0 to 31 loop 
-			
-		--	wait for 1 ns;
+		WAIT FOR 10 ns;
 
-		--	wait for 10 ns;
-		--END LOOP;
-	
-		assert RegA <= std_logic_vector(to_unsigned(555,32));
-			report "No se copia bien" 
-			severity failure;
-
-
-	assert false report "Fin de la simulacion" severity failure;
-
-
-	WAIT;
+		ASSERT regA <= STD_LOGIC_VECTOR(to_unsigned(555, 32));
+		REPORT "No se copia bien"
+			SEVERITY failure;
+		ASSERT false REPORT "Fin de la simulacion" SEVERITY failure;
+		WAIT;
 	END PROCESS always;
 END BancoReg_arch;

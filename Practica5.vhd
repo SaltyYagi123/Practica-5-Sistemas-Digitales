@@ -43,13 +43,15 @@ BEGIN
 	--Senhal PC_In
 	pc_in <= alu_out WHEN m_pc = "00" ELSE
 		alur_out WHEN m_pc = "01" ELSE
-		STD_LOGIC_VECTOR(to_unsigned(0, 32)) WHEN m_pc = "11";
+		STD_LOGIC_VECTOR(to_unsigned(0, 32)) WHEN m_pc = "10";
 
 	--Senhal pc_enable
 	mux_exit <= z WHEN mux_ir_out = "00" ELSE
 		NOT(z) WHEN mux_ir_out = "01" ELSE
 		lt WHEN mux_ir_out = "10" ELSE
 		ge WHEN mux_ir_out = "11";
+		
+		
 	en_pc <= ((mux_exit AND wr_pc_cond) OR wr_pc);
 
 	--Senhal d_in desde del generador de inmediatos
@@ -85,7 +87,8 @@ BEGIN
 			d => pc_in,
 			clk => clk,
 			en => en_pc,
-			q => pc_out
+			q => pc_out, 
+			reset_n => reset_n
 		);
 
 	IR_PC : ENTITY work.Registro_Gen
@@ -96,7 +99,8 @@ BEGIN
 			d => pc_out,
 			clk => clk,
 			en => en_ir,
-			q => pc_ir
+			q => pc_ir, 
+			reset_n => reset_n
 		);
 
 	IR : ENTITY work.Registro_Gen
@@ -107,7 +111,8 @@ BEGIN
 			d => ir_in,
 			clk => clk,
 			en => en_ir,
-			q => ir_out
+			q => ir_out, 
+			reset_n => reset_n
 		);
 
 	ALUR : ENTITY work.Registro_Gen
@@ -118,7 +123,8 @@ BEGIN
 			d => alu_out,
 			clk => clk,
 			en => '1',
-			q => alur_out
+			q => alur_out, 
+			reset_n => reset_n
 		);
 
 	--Instanciamos las memorias 
@@ -144,17 +150,19 @@ BEGIN
 	--Instanciamos el Banco de Registros 
 	BancoReg : ENTITY work.BancoReg
 		GENERIC MAP(
-			n => 32
+			gen_width => 32, 
+			num_reg => 32
 		)
 		PORT MAP(
 			clk => clk,
-			en_banco => en_banco,
-			AddrA => ir_out(19 DOWNTO 15),
-			AddrB => ir_out(24 DOWNTO 20),
-			AddrW => ir_out(11 DOWNTO 7),
-			D_in => d_in, --Generada por nosotros
-			RegA => reg_a,
-			RegB => reg_b
+			en_w => en_banco,
+			addrA => ir_out(19 DOWNTO 15),
+			addrB => ir_out(24 DOWNTO 20),
+			addrW => ir_out(11 DOWNTO 7),
+			d_in => d_in, --Generada por nosotros
+			regA => reg_a,
+			regB => reg_b, 
+			reset_n => reset_n
 		);
 
 	--Instanciamos la ALU 
@@ -188,8 +196,8 @@ BEGIN
 		PORT MAP(
 			clk => clk,
 			reset_n => reset_n,
-			opcode =>ir_out(4 downto 0),
-			ir_out => ir_out,
+			opcode =>ir_out(6 downto 0),
+			ir_out => ir_out(31 downto 0), --Imponer que siempre sea 11???
 			tipo_inst => tipo_inst,
 			alu_op => alu_op,
 			m_pc => m_pc,
