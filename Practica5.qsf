@@ -67,24 +67,26 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME InmGen_vhd_tst -section_i
 set_global_assignment -name EDA_TEST_BENCH_NAME Practica5_vhd_tst -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME i1 -section_id Practica5_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Practica5_vhd_tst -section_id Practica5_vhd_tst
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/BancoReg.vht -section_id BancoReg_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/ALU.vht -section_id ALU_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/RAM.vht -section_id RAM_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/InmGen.vht -section_id InmGen_vhd_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/Practica5.vht -section_id Practica5_vhd_tst
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE RAM_tb.vhd
+set_global_assignment -name VHDL_FILE ramWrite.vhd
+set_global_assignment -name VHDL_FILE ramRead.vhd
+set_global_assignment -name VHDL_FILE ramModule.vhd
 set_global_assignment -name VHDL_FILE SumadorRestador.vhd
 set_global_assignment -name VHDL_FILE Sumador1Bit.vhd
-set_global_assignment -name VHDL_FILE ALU.vhd
-set_global_assignment -name VHDL_FILE ROM.vhd
+set_global_assignment -name VHDL_FILE rom.vhd
 set_global_assignment -name VHDL_FILE Registro_Gen.vhd
 set_global_assignment -name VHDL_FILE ram_core.vhd
 set_global_assignment -name VHDL_FILE RAM.vhd
 set_global_assignment -name VHDL_FILE Practica5.vhd
 set_global_assignment -name VHDL_FILE InmGen.vhd
 set_global_assignment -name VHDL_FILE CircuitoControl.vhd
-set_global_assignment -name VHDL_FILE BancoReg.vhd
+set_global_assignment -name VHDL_FILE bancoReg.vhd
+set_global_assignment -name VHDL_FILE ALU.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

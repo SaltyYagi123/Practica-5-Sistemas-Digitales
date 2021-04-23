@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Practica5">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_1_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_3_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_0_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_2_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ROM:ROM|altsyncram:memory_rtl_0" CBX_FILE_NAME="altsyncram_7471.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ram:RAM|ramModule:ramM1|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ram:RAM|ramModule:ramM3|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ram:RAM|ramModule:ramM0|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ram:RAM|ramModule:ramM2|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_utg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|rom:ROM|altsyncram:memory_rtl_0" CBX_FILE_NAME="altsyncram_k271.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
