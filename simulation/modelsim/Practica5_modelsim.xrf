@@ -1,5 +1,5 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/RAM_tb.vhd
+source_file = 1, RAM_tb.vhd
 source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd
 source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd
 source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd
@@ -26,7 +26,7 @@ source_file = 1, g:/quartus ii/instalacionquartus/quartus/libraries/megafunction
 source_file = 1, g:/quartus ii/instalacionquartus/quartus/libraries/megafunctions/altram.inc
 source_file = 1, g:/quartus ii/instalacionquartus/quartus/libraries/megafunctions/altdpram.inc
 source_file = 1, g:/quartus ii/instalacionquartus/quartus/libraries/megafunctions/cbx.lst
-source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/db/altsyncram_t571.tdf
+source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/db/altsyncram_7471.tdf
 source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/db/practica5.ram0_rom_16bd8.hdl.mif
 source_file = 1, C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/db/altsyncram_iog1.tdf
 design_name = Practica5

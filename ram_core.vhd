@@ -27,6 +27,7 @@ BEGIN
     p_ram : PROCESS (clk)
     BEGIN
         IF rising_edge(clk) THEN
+
             IF writer_enable = '1' THEN
                 ram_block(to_integer(unsigned(addr))) <= din;
             END IF;

@@ -33,7 +33,7 @@ ARCHITECTURE behavioral OF CircuitoControl IS
 	
 BEGIN
 
-	ir_out_SalCond <= (ir_out(14) & ir_out(12)); --????
+	ir_out_SalCond <= (ir_out(14) & ir_out(12)); 
 	
 	VarEstado : PROCESS (clk, reset_n)
 	BEGIN
@@ -44,7 +44,7 @@ BEGIN
 		ELSIF rising_edge(clk) THEN
 			e_actual <= e_sig;
 		END IF;
-	END PROCESS VarEstado;
+	END PROCESS;
 
 	TransicionEstados : PROCESS (e_actual, opcode)
 	BEGIN
@@ -57,7 +57,7 @@ BEGIN
 			WHEN Decod =>
 				IF opcode = "01101" THEN
 					e_sig <= Lui3;
-				ELSIF opcode = "01000" OR opcode = "00000" THEN
+				ELSIF (opcode = "01000" OR opcode = "00000") THEN
 					e_sig <= Lwsw3;
 				ELSIF opcode = "00101" THEN
 					e_sig <= Auipc3;

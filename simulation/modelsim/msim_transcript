@@ -157,18 +157,117 @@
 #    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 170 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
-# ** Fatal: (vsim-3734) Index value 169 is out of range 0 to 154.
-#    Time: 250 ns  Iteration: 0  Process: /practica5_vhd_tst/i1/ROM/mem_rom File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd
-# Fatal error in Process mem_rom at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd line 185
+# ** Fatal: (vsim-3734) Index value 17 is out of range 0 to 16.
+#    Time: 110 ns  Iteration: 0  Process: /practica5_vhd_tst/i1/ROM/mem_rom File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd
+# Fatal error in Process mem_rom at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd line 47
 # 
 # HDL call sequence:
-# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd 185 Process mem_rom
+# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd 47 Process mem_rom
+# 
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/addrA
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/addrB
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/addrNull
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/addrW
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/clk
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/d_in
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/en_w
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/gen_width
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/num_reg
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/pointer
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/regA
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/regB
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/reset_n
+add wave -position end  sim:/practica5_vhd_tst/i1/BancoReg/x0
+restart
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/ROM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Fatal: (vsim-3734) Index value 17 is out of range 0 to 16.
+#    Time: 110 ns  Iteration: 0  Process: /practica5_vhd_tst/i1/ROM/mem_rom File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd
+# Fatal error in Process mem_rom at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd line 47
+# 
+# HDL call sequence:
+# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd 47 Process mem_rom
+# 
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/alu_op
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/clk
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/e_actual
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/e_sig
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/en_banco
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/en_ir
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/ir_out
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/ir_out_SalCond
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/l_u
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/m_alu_a
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/m_alu_b
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/m_banco
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/m_pc
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/m_ram
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/m_shamt
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/mask_b0
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/opcode
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/reset_n
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/tipo_acc
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/tipo_inst
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/we_ram
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/wr_pc
+add wave -position end  sim:/practica5_vhd_tst/i1/Maquina_Estados/wr_pc_cond
+restart
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/ROM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/BancoReg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 0  Instance: /practica5_vhd_tst/i1/RAM
+# ** Fatal: (vsim-3734) Index value 17 is out of range 0 to 16.
+#    Time: 110 ns  Iteration: 0  Process: /practica5_vhd_tst/i1/ROM/mem_rom File: C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd
+# Fatal error in Process mem_rom at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd line 47
+# 
+# HDL call sequence:
+# Stopped at C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd 47 Process mem_rom
 # 

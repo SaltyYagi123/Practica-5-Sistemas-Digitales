@@ -20,7 +20,7 @@ ARCHITECTURE structural OF Practica5 IS
 	SIGNAL alu_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL alur_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL reg_a, reg_b : STD_LOGIC_VECTOR(31 DOWNTO 0);
-	SIGNAL d_ram_alu, pc_out_reg, inm : STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL d_ram_alu, inm : STD_LOGIC_VECTOR(31 DOWNTO 0); --PC OUT REG!!!!!!
 	SIGNAL ram_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL tipo_inst : STD_LOGIC_VECTOR(2 DOWNTO 0);
 	SIGNAL tipo_acc : STD_LOGIC_VECTOR(1 DOWNTO 0);
@@ -61,7 +61,7 @@ BEGIN
 
 	--Senhal d_in desde del generador de inmediatos
 	d_in <= d_ram_alu WHEN m_banco = "00" ELSE
-		pc_out_reg WHEN m_banco = "01" ELSE
+		pc_out WHEN m_banco = "01" ELSE
 		inm WHEN m_banco = "11" ELSE 
 		(others => '0');
 
@@ -214,6 +214,8 @@ ram_out when m_ram = '1' else
 			tipo_inst => tipo_inst,
 			alu_op => alu_op,
 			m_pc => m_pc,
+			mask_b0 => mask_b0,
+			m_shamt => m_shamt, --Me faltaba por imponer m_shmat y mask_b0
 			tipo_acc => tipo_acc,
 			m_banco => m_banco,
 			m_alu_a => m_alu_a,

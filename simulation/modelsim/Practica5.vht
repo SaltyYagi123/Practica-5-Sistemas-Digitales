@@ -32,11 +32,11 @@ BEGIN
 			--Con el decodificador queremos pasar por cada uno de nuestros registros
 			reset_n <= '1';
 
-			WAIT FOR 250 ns;
+			WAIT FOR 1 ms;
 
 			--reset_n <= '0';
 			
-			WAIT FOR 250 ns;
+			WAIT FOR 4 ns;
 
 		ASSERT false REPORT "Fin de la simulacion" SEVERITY failure;
 

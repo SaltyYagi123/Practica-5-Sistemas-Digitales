@@ -19,9 +19,11 @@ ARCHITECTURE behavioral OF ALU IS
     SIGNAL v_ceros : STD_LOGIC_VECTOR(data_width - 2 DOWNTO 0);
     SIGNAL a_se : STD_LOGIC_VECTOR(data_width DOWNTO 0);
     SIGNAL b_se : STD_LOGIC_VECTOR(data_width DOWNTO 0);
+    
 BEGIN
 
     v_ceros <= (OTHERS => '0');
+
     sr_sel <= '1' WHEN sel = "1000" OR sel = "0010" OR sel = "0011" ELSE
         '0';
     a_se <= (a(data_width - 1) & a) WHEN (sel = "0000") OR (sel = "1000") OR (sel = "0010") ELSE

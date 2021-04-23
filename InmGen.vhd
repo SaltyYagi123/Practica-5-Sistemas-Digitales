@@ -18,60 +18,58 @@ END InmGen;
 ARCHITECTURE rtl OF InmGen IS
     --Declaracion de constantes, el cual depende del ir_out 
     SUBTYPE tipo_inst_t IS STD_LOGIC_VECTOR(2 DOWNTO 0);
+
     CONSTANT TYPE_I : tipo_inst_t := "000";
     CONSTANT TYPE_S : tipo_inst_t := "001";
     CONSTANT TYPE_B : tipo_inst_t := "010";
     CONSTANT TYPE_U : tipo_inst_t := "011";
     CONSTANT TYPE_J : tipo_inst_t := "100";
 
+
     SIGNAL inm_i : STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
-    SIGNAL inm_s : STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
-    SIGNAL inm_b : STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
-    SIGNAL inm_u : STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
-    SIGNAL inm_j : STD_LOGIC_VECTOR(g_data_width - 1 DOWNTO 0);
+    --Hemos decido optar por la version que nos muestra en los apuntes que maneja e involucra a la señal de mask b0, esto nos resulta 
+    --Mas util para visualizar el testbench final 
+	SIGNAL inm_sin_mask : STD_LOGIC;
+
+    
 
 BEGIN
 
-    --Constructor I ir_out
-    inm_i(31 DOWNTO 11) <= (OTHERS => ir_out(31));
-    inm_i(10 DOWNTO 5) <= ir_out(30 DOWNTO 25);
-    inm_i(4 DOWNTO 1) <= ir_out(24 DOWNTO 21);
-    inm_i(0) <= ir_out(20);
 
-    --Constructor S ir_out 
-    inm_s(31 DOWNTO 11) <= (OTHERS => ir_out(31));
-    inm_s(10 DOWNTO 5) <= ir_out(30 DOWNTO 25);
-    inm_s(4 DOWNTO 1) <= ir_out(11 DOWNTO 8);
-    inm_s(0) <= ir_out(7);
+    --Hemos decidido optar por una manera mucho mas dinamica, donde se 
+    --observa que en un unico registro, estamos metiendo la diferentes 
+    --posibilidades -> dependiendo de los tipos 
+    inm_sin_mask <=
+        ir_out(20) WHEN tipo_inst = TYPE_I ELSE
+        ir_out(7) WHEN tipo_inst = TYPE_S ELSE
+        '0';
 
-    --Constructor B ir_out 
-    inm_b(31 DOWNTO 12) <= (OTHERS => ir_out(31));
-    inm_b(11) <= ir_out(7);
-    inm_b(10 DOWNTO 5) <= ir_out(30 DOWNTO 25);
-    inm_b(4 downto 1 ) <= ir_out(11 downto 8) ;
-	 inm_b(0) <= '0';
+    inm_i(0) <= inm_sin_mask AND mask_b0;
 
-    --Constructor U ir_out
-    inm_u(31) <= ir_out(31);
-    inm_u(30 DOWNTO 20) <= ir_out(30 DOWNTO 20);
-    inm_u(19 DOWNTO 12) <= ir_out(19 DOWNTO 12);
-    inm_u(11 DOWNTO 0) <= (OTHERS => '0');
+    inm_i(4 DOWNTO 1) <=
+    ir_out(24 DOWNTO 21) WHEN (tipo_inst = TYPE_I OR tipo_inst = TYPE_J) ELSE
+    ir_out(11 DOWNTO 8) WHEN (tipo_inst = TYPE_S OR tipo_inst = TYPE_B) ELSE
+    (OTHERS => '0');
 
-    --Constructor J ir_out 
-	 inm_j (31 downto 20) <= (others => ir_out(31));
-    inm_j (19 downto 12) <= ir_out (19 downto 12);
-    inm_j(11) <= ir_out(20);
-    inm_j (10 downto 5) <= ir_out (30 downto 25);
-    inm_j (4 downto 1) <= ir_out (24 downto 21);
-    inm_j(0) <= '0';
+    inm_i(10 DOWNTO 5) <=
+    (OTHERS => '0') WHEN tipo_inst = TYPE_U ELSE
+    ir_out(30 DOWNTO 25);
 
-    --Pasar al inm el inmediato generado dependiendo del tipo de instruccion 
-    WITH tipo_inst SELECT inm <=
-        inm_i WHEN TYPE_I,
-        inm_s WHEN TYPE_S,
-        inm_b WHEN TYPE_B,
-        inm_u WHEN TYPE_U,
-        inm_j WHEN TYPE_J,
-        (OTHERS => '0') WHEN OTHERS;
+    inm_i(11) <=
+    ir_out(7) WHEN tipo_inst = TYPE_B ELSE
+    ir_out(20) WHEN tipo_inst = TYPE_J ELSE
+    '0' WHEN tipo_inst = TYPE_U ELSE
+    ir_out(31);
 
+    inm_i(19 DOWNTO 12) <=
+    ir_out(19 DOWNTO 12) WHEN (tipo_inst = TYPE_U OR tipo_inst = TYPE_J) ELSE
+    (OTHERS => ir_out(31));
+
+    inm_i(30 DOWNTO 20) <=
+    ir_out(30 DOWNTO 20) WHEN tipo_inst = TYPE_U ELSE
+    (OTHERS => ir_out(31));
+
+    inm_i(31) <= ir_out(31);
+
+    inm <= inm_i;
 END rtl; -- rtl

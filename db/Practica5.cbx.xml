@@ -5,6 +5,6 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_3_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_0_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|RAM:RAM|altsyncram:ram_2_rtl_0" CBX_FILE_NAME="altsyncram_iog1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ROM:ROM|altsyncram:memory_rtl_0" CBX_FILE_NAME="altsyncram_t571.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Practica5|ROM:ROM|altsyncram:memory_rtl_0" CBX_FILE_NAME="altsyncram_7471.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
