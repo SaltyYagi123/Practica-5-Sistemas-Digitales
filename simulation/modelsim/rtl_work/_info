@@ -3,34 +3,35 @@ K3
 13
 cModel Technology
 Z0 dC:\Users\ytobi\OneDrive\Escritorio\Practica-5-Sistemas-Digitales-\simulation\modelsim
-Ebancoreg
-Z1 w1619024972
+Ealu
+Z1 w1618946714
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z5 dC:\Users\ytobi\OneDrive\Escritorio\Practica-5-Sistemas-Digitales-\simulation\modelsim
-Z6 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
-Z7 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
+Z6 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd
+Z7 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd
 l0
 L5
-V5C<<7GQFaR]eG[VK?_ZQ]0
+VJMEgUF5CZM=c7h24ll_bN3
 Z8 OV;C;10.1d;51
 31
-Z9 !s108 1619025950.171000
-Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd|
-Z11 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd|
+Z9 !s108 1619177942.610000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd|
+Z11 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ALU.vhd|
 Z12 o-93 -work work -O0
 Z13 tExplicit 1
-!s100 zKI^K34E^>@WcBKzz[Tl33
+!s100 5S6>cflkA2khk6Z9hG8SI2
 !i10b 1
 Abehavioral
+Z14 DEx4 work 15 sumadorrestador 0 22 cA4I5E]YcldkUVU@?j_YQ2
 R2
 R3
 R4
-DEx4 work 8 bancoreg 0 22 5C<<7GQFaR]eG[VK?_ZQ]0
-l31
-L23
-Va;<RT[m=]4le0P:2K0TC42
+Z15 DEx4 work 3 alu 0 22 JMEgUF5CZM=c7h24ll_bN3
+l22
+L16
+V50LgJb_;doo;`Z`jSE9YS1
 R8
 31
 R9
@@ -38,42 +39,377 @@ R10
 R11
 R12
 R13
-!s100 03o2<[R?on5K?I2_@jlCI0
+!s100 hNzk2CRA8XMBNG<@@e=ac1
 !i10b 1
-Ebancoreg_vhd_tst
-Z14 w1619025924
+Ebancoreg
+Z16 w1619024972
 R2
 R3
 R4
 R5
-Z15 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
-Z16 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht
+Z17 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
+Z18 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd
 l0
 L5
-Vb9fP5X5JjAN1UbzFLDQLz3
-!s100 ;1F2YFN:>beEnRWF]og;Z1
+V5C<<7GQFaR]eG[VK?_ZQ]0
 R8
 31
-!i10b 1
-Z17 !s108 1619025950.229000
-Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht|
-Z19 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/BancoReg.vht|
+Z19 !s108 1619177942.550000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd|
+Z21 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/BancoReg.vhd|
 R12
 R13
-Abancoreg_arch
+!s100 zKI^K34E^>@WcBKzz[Tl33
+!i10b 1
+Abehavioral
 R2
 R3
 R4
-DEx4 work 16 bancoreg_vhd_tst 0 22 b9fP5X5JjAN1UbzFLDQLz3
-l35
-L8
-VEElond^15D@k[:HK@j53b0
-!s100 9I1HgDzcfja=EdE[[ekCI3
+Z22 DEx4 work 8 bancoreg 0 22 5C<<7GQFaR]eG[VK?_ZQ]0
+l31
+L23
+Va;<RT[m=]4le0P:2K0TC42
+R8
+31
+R19
+R20
+R21
+R12
+R13
+!s100 03o2<[R?on5K?I2_@jlCI0
+!i10b 1
+Ecircuitocontrol
+Z23 w1619177512
+R3
+R4
+R5
+Z24 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/CircuitoControl.vhd
+Z25 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/CircuitoControl.vhd
+l0
+L4
+V;]c6[;XFzz<iMcTmS::WY3
+R8
+31
+Z26 !s108 1619177942.493000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/CircuitoControl.vhd|
+Z28 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/CircuitoControl.vhd|
+R12
+R13
+!s100 H`4lI`7o;ogP3<V9>Vje=2
+!i10b 1
+Abehavioral
+R3
+R4
+Z29 DEx4 work 15 circuitocontrol 0 22 ;]c6[;XFzz<iMcTmS::WY3
+l34
+L28
+VGOW=heM=gPTen]:bOkIz[2
+R8
+31
+R26
+R27
+R28
+R12
+R13
+!s100 >fcjN]zUQnGhZPQP4VYP?0
+!i10b 1
+Einmgen
+Z30 w1619176193
+R2
+R3
+R4
+R5
+Z31 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd
+Z32 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd
+l0
+L6
+V4R=zlgC2KoZYF5R4Q7Vf71
+R8
+31
+Z33 !s108 1619177942.430000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd|
+Z35 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/InmGen.vhd|
+R12
+R13
+!s100 03G9J8[G^Cc9QB9m8obT@0
+!i10b 1
+Artl
+R2
+R3
+R4
+Z36 DEx4 work 6 inmgen 0 22 4R=zlgC2KoZYF5R4Q7Vf71
+l33
+L18
+V`4PCnV>`Q?mOlONYT4jJW3
+R8
+31
+R33
+R34
+R35
+R12
+R13
+!s100 fL@lOkP03ARcUO7]DL`>J0
+!i10b 1
+Epractica5
+Z37 w1619177696
+R2
+R3
+R4
+R5
+Z38 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Practica5.vhd
+Z39 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Practica5.vhd
+l0
+L5
+VPkZYT1_f5GKbO`j;YF=U:0
+R8
+31
+Z40 !s108 1619177942.675000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Practica5.vhd|
+Z42 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Practica5.vhd|
+R12
+R13
+!s100 bOgfWV>@TER94oIRe`W1K1
+!i10b 1
+Astructural
+R29
+R36
+R15
+R22
+Z43 DEx4 work 3 rom 0 22 Y>a[GHI;2X:lBJJoFT6=m2
+Z44 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+Z45 DEx4 work 3 ram 0 22 =`L2d]h9z9lRdY]T>T]E52
+Z46 DEx4 work 12 registro_gen 0 22 Kk@0PKN2Q:l`Wo=OCmmI23
+R2
+R3
+R4
+DEx4 work 9 practica5 0 22 PkZYT1_f5GKbO`j;YF=U:0
+l41
+L14
+V2G>nF2a450SF3z7A5c>Ib1
+R8
+31
+R40
+R41
+R42
+R12
+R13
+!s100 D=l;e@n^gWIOe2>M2^a163
+!i10b 1
+Epractica5_vhd_tst
+Z47 w1619160365
+R3
+R4
+R5
+Z48 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/Practica5.vht
+Z49 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/Practica5.vht
+l0
+L5
+Vii[[Gk:STQ5i`S4`A:1CA3
+!s100 6MeM5C;kjkQoGcGGCTMZB1
 R8
 31
 !i10b 1
-R17
-R18
-R19
+Z50 !s108 1619177942.742000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/Practica5.vht|
+Z52 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/simulation/modelsim/Practica5.vht|
 R12
 R13
+Apractica5_arch
+R3
+R4
+DEx4 work 17 practica5_vhd_tst 0 22 ii[[Gk:STQ5i`S4`A:1CA3
+l18
+L7
+VfmbFZ]n2h;WEliboT`iKR1
+!s100 c0VH3CANUJFGQ@XnXT4ec2
+R8
+31
+!i10b 1
+R50
+R51
+R52
+R12
+R13
+Eram
+Z53 w1618852478
+R44
+R2
+R3
+R4
+R5
+Z54 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/RAM.vhd
+Z55 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/RAM.vhd
+l0
+L38
+V=`L2d]h9z9lRdY]T>T]E52
+R8
+31
+Z56 !s108 1619177942.368000
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/RAM.vhd|
+Z58 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/RAM.vhd|
+R12
+R13
+!s100 V9Kn`lHY>Ti;9[E2Uf]=^1
+!i10b 1
+Abehavioural
+R44
+R2
+R3
+R4
+R45
+l78
+L53
+VfKS_e7WW5N>lBnF_K;7Ll1
+R8
+31
+R56
+R57
+R58
+R12
+R13
+!s100 UV8N:A55dI^zBS1fZO[=L3
+!i10b 1
+Eregistro_gen
+Z59 w1619175592
+R2
+R3
+R4
+R5
+Z60 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Registro_Gen.vhd
+Z61 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Registro_Gen.vhd
+l0
+L5
+VKk@0PKN2Q:l`Wo=OCmmI23
+R8
+31
+Z62 !s108 1619177942.308000
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Registro_Gen.vhd|
+Z64 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Registro_Gen.vhd|
+R12
+R13
+!s100 O45jPceXfcIO>0Bk=@]fj1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R46
+l22
+L18
+V`mXb3JFeM;PmXH`=3BZ9G3
+R8
+31
+R62
+R63
+R64
+R12
+R13
+!s100 kg5R?fG;KXiLJkIHbR9VY0
+!i10b 1
+Erom
+Z65 w1619171095
+R2
+R3
+R4
+R5
+Z66 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd
+Z67 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd
+l0
+L8
+VY>a[GHI;2X:lBJJoFT6=m2
+R8
+31
+Z68 !s108 1619177942.247000
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd|
+Z70 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/ROM.vhd|
+R12
+R13
+!s100 4TCoPSfcUORdJLHaK2bRV0
+!i10b 1
+Abehavioural
+R2
+R3
+R4
+R43
+l177
+L16
+V`aiAGLhLiWoBVR2I@]1:O2
+R8
+31
+R68
+R69
+R70
+R12
+R13
+!s100 A5;348OeCa^AI@_T6876j3
+!i10b 1
+Esumador1bit
+Z71 w1618353640
+R3
+R4
+R5
+Z72 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd
+Z73 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd
+l0
+L4
+VLdMIMV^a<eQzBSIb[]2Y>1
+R8
+31
+Z74 !s108 1619177942.190000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd|
+Z76 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/Sumador1Bit.vhd|
+R12
+R13
+!s100 CEW<^=7]bW20ffI=c9PY11
+!i10b 1
+Abehavioral
+R3
+R4
+DEx4 work 11 sumador1bit 0 22 LdMIMV^a<eQzBSIb[]2Y>1
+l14
+L13
+V@Y_V0ME[9z`GDIU4?UaVj3
+R8
+31
+R74
+R75
+R76
+R12
+R13
+!s100 DmeJVdmMX5>J4Kb8XKJ:`2
+!i10b 1
+Esumadorrestador
+Z77 w1618353322
+R3
+R4
+R5
+Z78 8C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd
+Z79 FC:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd
+l0
+L4
+VcA4I5E]YcldkUVU@?j_YQ2
+R8
+31
+Z80 !s108 1619177942.127000
+Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd|
+Z82 !s107 C:/Users/ytobi/OneDrive/Escritorio/Practica-5-Sistemas-Digitales-/SumadorRestador.vhd|
+R12
+R13
+!s100 OVB5cfW3?g0m6lGkz95Uz0
+!i10b 1
+Astructural
+R3
+R4
+R14
+l26
+L15
+VCK5RD>?klIYZD=b08<dAS2
+R8
+31
+R80
+R81
+R82
+R12
+R13
+!s100 lL`=DS=GOh96R=>7nER7:3
+!i10b 1

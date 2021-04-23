@@ -34,7 +34,7 @@ BEGIN
 
 			WAIT FOR 250 ns;
 
-			reset_n <= '0';
+			--reset_n <= '0';
 			
 			WAIT FOR 250 ns;
 

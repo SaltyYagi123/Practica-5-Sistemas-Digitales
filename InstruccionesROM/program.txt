@@ -1,17 +1,155 @@
 Address     Code        Basic                        Line Source
 
-0x00003000  0x00000f93  addi x31,x0,0                1    	li t6, 0x00000000 #Cargamos la direccion nula en t6 
-0x00003004  0x02c0006f  jal x0,44                    2    	j main #Jump to main->
-0x00003008  0x00100293  addi x5,x0,1                 4    comp :  li t0, 1  #Le cargamos al t0 -> 1
-0x0000300c  0x00f00f13  addi x30,x0,15               5    	li t5, 15 #Le cargamos al t5 -> 15
-0x00003010  0x00b50663  beq x10,x11,12               6    	beq a0, a1, corr #Comparamos a1 y a0, que en este caso si que son iguales -> Por lo tanto pasamos a corr, si no lo fuera pasamos a inco 
-0x00003014  0x01efa023  sw x30,0(x31)                8    inco :  sw t5,0(t6) #En el caso de que no sean iguales, almacenamos la 15 en la direccion de memoria
-0x00003018  0x0080006f  jal x0,8                     9    	j retu #Jump to retu 
-0x0000301c  0x005fa023  sw x5,0(x31)                 11   corr : 	sw t0, 0(t6) #Metemos los contenidos de t0 <- 1 en la direccion de memoria t6 que metimos al principio
-0x00003020  0x004f8f93  addi x31,x31,4               13   retu : 	addi t6, t6, 4 #A t6 -> le sumamos espacio para una palabra
-0x00003024  0x00600e13  addi x28,x0,6                14   	li t3, 6
-0x00003028  0x01cfa023  sw x28,0(x31)                15   	sw t3, 0(t6) 
-0x0000302c  0x00008067  jalr x0,x1,0                 16    	ret #<- Esto sirve para guardar los resultados antes de actualizar el puntero
-0x00003030  0x00500593  addi x11,x0,5                19   main : 	addi a1, x0, 5 #Le asignamos a a1 y a a0 un valor de 5
-0x00003034  0x00500513  addi x10,x0,5                20   	addi a0, x0, 5 
-0x00003038  0xfd1ff0ef  jal x1,-48                   21   	jal comp #Jump and link to -> nos guarda el return address
+0x00400000  0x00100313  addi x6,x0,1                 19   addi t1, zero, 1
+0x00400004  0xfff00393  addi x7,x0,-1                20   addi t2, zero, -1
+0x00400008  0x008000ef  jal x1,8                     26   jal PruebaJal
+0x0040000c  0xf9c00613  addi x12,x0,-100             27   addi x12, zero, -100
+0x00400010  0x06400693  addi x13,x0,100              28   PruebaJal: addi x13, zero, 100
+0x00400014  0x010080e7  jalr x1,x1,16                30   jalr ra, 16
+0x00400018  0xf3800713  addi x14,x0,-200             31   addi x14, zero, -200
+0x0040001c  0x0c800793  addi x15,x0,200              32   addi x15, zero, 200
+0x00400020  0x00200313  addi x6,x0,2                 37   addi t1, zero, 2
+0x00400024  0x00200393  addi x7,x0,2                 38   addi t2, zero, 2
+0x00400028  0x00730663  beq x6,x7,12                 40   beq t1, t2, Condicion1
+0x0040002c  0xfff00513  addi x10,x0,-1               41   addi x10, zero, -1
+0x00400030  0x230000ef  jal x1,560                   42   jal Error
+0x00400034  0x00100593  addi x11,x0,1                43   Condicion1: addi x11, zero, 1
+0x00400038  0x00100313  addi x6,x0,1                 45   addi t1, zero, 1
+0x0040003c  0x00734663  blt x6,x7,12                 46   blt t1, t2, Condicion2
+0x00400040  0xffe00513  addi x10,x0,-2               47   addi x10, zero, -2
+0x00400044  0x21c000ef  jal x1,540                   48   jal Error
+0x00400048  0x00200593  addi x11,x0,2                49   Condicion2: addi x11, zero, 2
+0x0040004c  0x0063d663  bge x7,x6,12                 51   bge t2, t1, Condicion3
+0x00400050  0xffd00513  addi x10,x0,-3               52   addi x10, zero, -3
+0x00400054  0x20c000ef  jal x1,524                   53   jal Error
+0x00400058  0x00300593  addi x11,x0,3                54   Condicion3: addi x11, zero, 3
+0x0040005c  0x00639663  bne x7,x6,12                 56   bne t2, t1, Condicion4
+0x00400060  0xffc00513  addi x10,x0,-4               57   addi x10, zero, -4
+0x00400064  0x1fc000ef  jal x1,508                   58   jal Error
+0x00400068  0x00400593  addi x11,x0,4                59   Condicion4: addi x11, zero, 4
+0x0040006c  0xf9c00313  addi x6,x0,-100              61   addi t1, zero, -100
+0x00400070  0x0063e663  bltu x7,x6,12                62   bltu t2, t1, Condicion5
+0x00400074  0xffb00513  addi x10,x0,-5               63   addi x10, zero, -5
+0x00400078  0x1e8000ef  jal x1,488                   64   jal Error
+0x0040007c  0x00500593  addi x11,x0,5                65   Condicion5: addi x11, zero, 5
+0x00400080  0x00737663  bgeu x6,x7,12                67   bgeu t1, t2, Condicion6
+0x00400084  0xffa00513  addi x10,x0,-6               68   addi x10, zero, -6
+0x00400088  0x1d8000ef  jal x1,472                   69   jal Error
+0x0040008c  0x00600593  addi x11,x0,6                70   Condicion6: addi x11, zero, 6
+0x00400090  0x00200313  addi x6,x0,2                 75   addi t1, zero, 2
+0x00400094  0x00100e93  addi x29,x0,1                77   addi t4, zero, 1
+0x00400098  0x00a32393  slti x7,x6,10                78   slti t2, t1, 10
+0x0040009c  0x007e8663  beq x29,x7,12                79   beq t4, t2, AritIm1
+0x004000a0  0xff900513  addi x10,x0,-7               80   addi x10, zero, -7
+0x004000a4  0x1bc000ef  jal x1,444                   81   jal Error
+0x004000a8  0x00700593  addi x11,x0,7                82   AritIm1: addi x11, zero, 7
+0x004000ac  0x00000e93  addi x29,x0,0                84   addi t4, zero, 0
+0x004000b0  0xf9c00313  addi x6,x0,-100              85   addi t1, zero, -100
+0x004000b4  0x00a33393  sltiu x7,x6,10               86   sltiu t2, t1, 10
+0x004000b8  0x007e8663  beq x29,x7,12                87   beq t4, t2, AritIm2
+0x004000bc  0xff800513  addi x10,x0,-8               88   addi x10, zero, -8
+0x004000c0  0x1a0000ef  jal x1,416                   89   jal Error
+0x004000c4  0x00800593  addi x11,x0,8                90   AritIm2: addi x11, zero, 8
+0x004000c8  0x00600313  addi x6,x0,6                 92   addi t1, zero, 6
+0x004000cc  0x00400e93  addi x29,x0,4                93   addi t4, zero, 4
+0x004000d0  0x00234393  xori x7,x6,2                 94   xori t2, t1, 2
+0x004000d4  0x007e8663  beq x29,x7,12                95   beq t4, t2, AritIm3
+0x004000d8  0xff700513  addi x10,x0,-9               96   addi x10, zero, -9
+0x004000dc  0x184000ef  jal x1,388                   97   jal Error
+0x004000e0  0x00900593  addi x11,x0,9                98   AritIm3: addi x11, zero, 9
+0x004000e4  0x00600e93  addi x29,x0,6                100  addi t4, zero, 6
+0x004000e8  0x00236393  ori x7,x6,2                  101  ori t2, t1, 2
+0x004000ec  0x007e8663  beq x29,x7,12                102  beq t4, t2, AritIm4
+0x004000f0  0xff600513  addi x10,x0,-10              103  addi x10, zero, -10
+0x004000f4  0x16c000ef  jal x1,364                   104  jal Error
+0x004000f8  0x00a00593  addi x11,x0,10               105  AritIm4: addi x11, zero, 10
+0x004000fc  0x00200e93  addi x29,x0,2                107  addi t4, zero, 2
+0x00400100  0x00237393  andi x7,x6,2                 108  andi t2, t1, 2
+0x00400104  0x007e8663  beq x29,x7,12                109  beq t4, t2, AritIm5
+0x00400108  0xff500513  addi x10,x0,-11              110  addi x10, zero, -11
+0x0040010c  0x154000ef  jal x1,340                   111  jal Error
+0x00400110  0x00b00593  addi x11,x0,11               112  AritIm5: addi x11, zero, 11
+0x00400114  0x00200313  addi x6,x0,2                 114  addi t1, zero, 2
+0x00400118  0x00400e93  addi x29,x0,4                115  addi t4, zero, 4
+0x0040011c  0x00131393  slli x7,x6,1                 116  slli t2, t1, 1
+0x00400120  0x007e8663  beq x29,x7,12                117  beq t4, t2, AritIm6
+0x00400124  0xff400513  addi x10,x0,-12              118  addi x10, zero, -12
+0x00400128  0x138000ef  jal x1,312                   119  jal Error
+0x0040012c  0x00c00593  addi x11,x0,12               120  AritIm6: addi x11, zero, 12
+0x00400130  0xfff00313  addi x6,x0,-1                122  addi t1, zero, -1
+0x00400134  0x7ff00e93  addi x29,x0,2047             123  addi t4, zero, 0x7FF
+0x00400138  0x01535393  srli x7,x6,21                124  srli t2, t1, 21
+0x0040013c  0x007e8663  beq x29,x7,12                125  beq t4, t2, AritIm7
+0x00400140  0xff300513  addi x10,x0,-13              126  addi x10, zero, -13
+0x00400144  0x11c000ef  jal x1,284                   127  jal Error
+0x00400148  0x00d00593  addi x11,x0,13               128  AritIm7: addi x11, zero, 13
+0x0040014c  0xfff00e93  addi x29,x0,-1               130  addi t4, zero, -1
+0x00400150  0x41535393  srai x7,x6,21                131  srai t2, t1, 21
+0x00400154  0x007e8663  beq x29,x7,12                132  beq t4, t2, AritIm8
+0x00400158  0xff200513  addi x10,x0,-14              133  addi x10, zero, -14
+0x0040015c  0x104000ef  jal x1,260                   134  jal Error
+0x00400160  0x00e00593  addi x11,x0,14               135  AritIm8: addi x11, zero, 14
+0x00400164  0x00500313  addi x6,x0,5                 145  addi t1, zero, 5
+0x00400168  0x00300393  addi x7,x0,3                 146  addi t2, zero, 3
+0x0040016c  0x00200e93  addi x29,x0,2                147  addi t4, zero, 2
+0x00400170  0x40730e33  sub x28,x6,x7                148  sub t3, t1, t2
+0x00400174  0x01ce8663  beq x29,x28,12               149  beq t4, t3, Arit1
+0x00400178  0xff100513  addi x10,x0,-15              150  addi x10, zero, -15
+0x0040017c  0x0e4000ef  jal x1,228                   151  jal Error
+0x00400180  0x00f00593  addi x11,x0,15               152  Arit1: addi x11, zero, 15
+0x00400184  0xfff00313  addi x6,x0,-1                158  addi t1, zero, -1
+0x00400188  0x00f00393  addi x7,x0,15                159  addi t2, zero, 0xF
+0x0040018c  0x00612223  sw x6,4(x2)                  164  sw t1, 4(sp)
+0x00400190  0x00611423  sh x6,8(x2)                  165  sh t1, 8(sp)
+0x00400194  0x00610623  sb x6,12(x2)                 166  sb t1, 12(sp)
+0x00400198  0x00412383  lw x7,4(x2)                  168  lw t2, 4(sp)
+0x0040019c  0xfff00e93  addi x29,x0,-1               169  addi t4, zero, -1
+0x004001a0  0x007e8663  beq x29,x7,12                170  beq t4, t2, Ram1
+0x004001a4  0xff000513  addi x10,x0,-16              171  addi x10, zero, -16
+0x004001a8  0x0b8000ef  jal x1,184                   172  jal Error
+0x004001ac  0x01000593  addi x11,x0,16               173  Ram1: addi x11, zero, 16
+0x004001b0  0x00811383  lh x7,8(x2)                  175  lh t2, 8(sp)
+0x004001b4  0x007e8663  beq x29,x7,12                176  beq t4, t2, Ram2
+0x004001b8  0xfef00513  addi x10,x0,-17              177  addi x10, zero, -17
+0x004001bc  0x0a4000ef  jal x1,164                   178  jal Error
+0x004001c0  0x01100593  addi x11,x0,17               179  Ram2: addi x11, zero, 17
+0x004001c4  0x00c10383  lb x7,12(x2)                 181  lb t2, 12(sp)
+0x004001c8  0xfff00e93  addi x29,x0,-1               182  addi t4, zero, -1
+0x004001cc  0x007e8663  beq x29,x7,12                183  beq t4, t2, Ram3
+0x004001d0  0xfee00513  addi x10,x0,-18              184  addi x10, zero, -18
+0x004001d4  0x08c000ef  jal x1,140                   185  jal Error
+0x004001d8  0x01200593  addi x11,x0,18               186  Ram3: addi x11, zero, 18
+0x004001dc  0x00815383  lhu x7,8(x2)                 188  lhu t2, 8(sp)
+0x004001e0  0x7ff00e93  addi x29,x0,2047             189  addi t4, zero, 0x7FF
+0x004001e4  0x0053d393  srli x7,x7,5                 190  srli t2, t2, 5 # No hemos probado lui todavía, esto nos permite la comparación
+0x004001e8  0x007e8663  beq x29,x7,12                191  beq t4, t2, Ram4
+0x004001ec  0xfed00513  addi x10,x0,-19              192  addi x10, zero, -19
+0x004001f0  0x070000ef  jal x1,112                   193  jal Error
+0x004001f4  0x01300593  addi x11,x0,19               194  Ram4: addi x11, zero, 19
+0x004001f8  0x00c14383  lbu x7,12(x2)                196  lbu t2, 12(sp)
+0x004001fc  0x00f00e93  addi x29,x0,15               197  addi t4, zero, 0xF
+0x00400200  0x0043d393  srli x7,x7,4                 198  srli t2, t2, 4
+0x00400204  0x007e8663  beq x29,x7,12                199  beq t4, t2, Ram5
+0x00400208  0xfec00513  addi x10,x0,-20              200  addi x10, zero, -20
+0x0040020c  0x054000ef  jal x1,84                    201  jal Error
+0x00400210  0x01400593  addi x11,x0,20               202  Ram5: addi x11, zero, 20
+0x00400214  0x00001337  lui x6,1                     207  lui t1, 0x001
+0x00400218  0xf1130393  addi x7,x6,-239              208  addi t2, t1, 0xFFFFFF11
+0x0040021c  0x0f100e93  addi x29,x0,241              209  addi t4, zero, 0xF1
+0x00400220  0x0043d393  srli x7,x7,4                 210  srli t2, t2, 4
+0x00400224  0x007e8663  beq x29,x7,12                211  beq t4, t2, Lui1
+0x00400228  0xfeb00513  addi x10,x0,-21              212  addi x10, zero, -21
+0x0040022c  0x034000ef  jal x1,52                    213  jal Error
+0x00400230  0x01500593  addi x11,x0,21               214  Lui1: addi x11, zero, 21
+0x00400234  0x00001317  auipc x6,1                   216  auipc t1, 1
+0x00400238  0x00000397  auipc x7,0                   217  auipc t2, 0
+0x0040023c  0xffc38393  addi x7,x7,-4                218  addi t2, t2, -4
+0x00400240  0x00001e37  lui x28,1                    219  lui t3, 1
+0x00400244  0x01c383b3  add x7,x7,x28                220  add t2, t2, t3
+0x00400248  0x00730663  beq x6,x7,12                 221  beq t1, t2, Auipc1
+0x0040024c  0xfea00513  addi x10,x0,-22              222  addi x10, zero, -22
+0x00400250  0x010000ef  jal x1,16                    223  jal Error
+0x00400254  0x01600593  addi x11,x0,22               224  Auipc1: addi x11, zero, 22
+0x00400258  0x00100493  addi x9,x0,1                 226  addi x9, zero, 1
+0x0040025c  0x008000ef  jal x1,8                     227  jal End
+0x00400260  0xfff00413  addi x8,x0,-1                230  Error: addi x8, zero, -1

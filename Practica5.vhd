@@ -40,16 +40,21 @@ ARCHITECTURE structural OF Practica5 IS
 	
 BEGIN
 
+
+	mux_ir_out <= ir_out(14) & ir_out(12);
+		
 	--Senhal PC_In
 	pc_in <= alu_out WHEN m_pc = "00" ELSE
 		alur_out WHEN m_pc = "01" ELSE
-		STD_LOGIC_VECTOR(to_unsigned(0, 32)) WHEN m_pc = "10";
+		(others => '0') when m_pc = "10" else
+		(others => '0');
+
 
 	--Senhal pc_enable
 	mux_exit <= z WHEN mux_ir_out = "00" ELSE
-		NOT(z) WHEN mux_ir_out = "01" ELSE
+		not(z) WHEN mux_ir_out = "01" ELSE
 		lt WHEN mux_ir_out = "10" ELSE
-		ge WHEN mux_ir_out = "11";
+		ge WHEN mux_ir_out = "11" ELSE '0';
 		
 		
 	en_pc <= ((mux_exit AND wr_pc_cond) OR wr_pc);
@@ -57,26 +62,34 @@ BEGIN
 	--Senhal d_in desde del generador de inmediatos
 	d_in <= d_ram_alu WHEN m_banco = "00" ELSE
 		pc_out_reg WHEN m_banco = "01" ELSE
-		inm WHEN m_banco = "11";
+		inm WHEN m_banco = "11" ELSE 
+		(others => '0');
 
 	--Senhal que conecta el Banco de Registros a la ALU 
 	alu_a <= reg_a WHEN m_alu_a = "00" ELSE
 		pc_out WHEN m_alu_a = "01" ELSE
-		pc_ir WHEN m_alu_a = "10";
+		pc_ir WHEN m_alu_a = "10" ELSE 
+		(others => '0');
 
 	alu_b <= reg_b WHEN m_alu_b = "00" ELSE
-		STD_LOGIC_VECTOR(to_unsigned(4, 32)) WHEN m_alu_b = "01" ELSE --!!??!!
-		inm WHEN m_alu_b = "10";
+		STD_LOGIC_VECTOR(to_unsigned(4, 28)) & "0100" WHEN m_alu_b = "01" ELSE --!!??!!
+		inm WHEN m_alu_b = "10" else 
+		(others => '0');
 
-	shamt_in <= reg_b(4 DOWNTO 0) WHEN m_shamt = '0' ELSE
-		ir_out(24 DOWNTO 20) WHEN m_shamt = '1';
+	shamt_in <= reg_b(4 downto 0) when m_shamt = '0' else
+	ir_out(24 downto 20) when m_shamt = '1' else
+	(others => '0');
+
+
 
 	--Senhal de la salida despues de la RAM  
-	d_ram_alu <= alur_out WHEN m_ram = '0' ELSE
-		ram_out WHEN m_ram = '1';
+d_ram_alu <= alur_out when m_ram = '0' else
+ram_out when m_ram = '1' else
+(others => '0');
+
 
 	--SeÃ±al que construimos nosotros para el mux4a1 de la izquierda
-	mux_ir_out <= ir_out(14) & ir_out(12);
+
 
 	--Instanciamos todos los registros 
 	PC : ENTITY work.Registro_Gen
@@ -196,7 +209,7 @@ BEGIN
 		PORT MAP(
 			clk => clk,
 			reset_n => reset_n,
-			opcode =>ir_out(6 downto 0),
+			opcode =>ir_out(6 downto 2),
 			ir_out => ir_out(31 downto 0), --Imponer que siempre sea 11???
 			tipo_inst => tipo_inst,
 			alu_op => alu_op,

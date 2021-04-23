@@ -66,13 +66,13 @@ ARCHITECTURE BancoReg_arch OF BancoReg_vhd_tst IS
 			addrB <= STD_LOGIC_VECTOR(to_unsigned(i, 5));
 			WAIT FOR 40 ns;
 			en_w <= '1';
-			WAIT FOR 40 ns;
+			WAIT FOR 60 ns;
 			en_w <= '0';
 			WAIT FOR 40 ns;
 
 		END LOOP;
 
-		WAIT FOR 10 ns;
+		WAIT FOR 50 ns;
 
 		ASSERT regA <= STD_LOGIC_VECTOR(to_unsigned(555, 32));
 		REPORT "No se copia bien"

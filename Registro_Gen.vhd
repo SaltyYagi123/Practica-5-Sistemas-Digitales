@@ -21,7 +21,7 @@ ARCHITECTURE behavioral OF Registro_Gen IS
 
 BEGIN
 
-    PROCESS (clk)
+    PROCESS (clk, reset_n)
     BEGIN --process
 		  IF reset_n = '0' then 
 					registro <= (others => '0');
